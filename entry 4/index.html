@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>entry 4</title>
+    <link rel="stylesheet" href="https://use.typekit.net/yit8fla.css">
+    <link rel="stylesheet" href="css/style.css"> <!-- Make sure the path to your CSS file is correct -->
+    
+
+</head>
+<body>
+    <div class="header">
+        <a href="#" class="back"> BACK</a>
+        <a href="#" class="next"> NEXT</a>
+    </div>
+    <div class="folks">
+        <h1>Do you ever feel the need to skip a song after the good part is over?</h1>
+    </div>
+
+    <div class="dialog-container" id="dialog-container">
+        <div class="dialog" id="dialog">
+            <div class="input-group">
+                <button class="btn" onclick="showSentence('Then this page is for you!')">YES</button>
+                <button class="btnN" onclick="showSentence('Well don\'t lie to yourself...')">NO</button>
+            </div>
+        </div>
+    <div id="sentence"></div>
+<div class="int">
+    presenting to you... INTERLUDES! (bascially a shorter form of a song)
+</div>
+ 
+    <div class="position">
+        <div class="de" onclick="playSong('audio1')">
+            <h2 id="born">tension: borns</h2>
+        </div>
+        <div class="di" onclick="playSong('audio2')">
+            <h2 id="sdp">sdp interlude: travis scott</h2>
+        </div>
+        <div class="dii" onclick="playSong('audio3')">
+            <h2 id="jorja">jorja interlude: drake</h2>
+        </div>
+    </div>
+
+    <audio id="audio1" src="Tension (Interlude) (320 kbps).mp3"></audio>
+    <audio id="audio2" src="Travis Scott - SDP Interlude (Lyrics) (320 kbps).mp3"></audio>
+    <audio id="audio3" src="Jorja Interlude.mp3"></audio>
+
+    <script>
+        var currentAudio = null;
+
+        function playSong(audioId) {
+            var audio = document.getElementById(audioId);
+
+            if (currentAudio !== null && currentAudio !== audio) {
+                currentAudio.pause();
+            }
+
+            if (audio.paused) {
+                audio.play();
+                currentAudio = audio;
+            } else {
+                audio.pause();
+                currentAudio = null;
+            }
+        }
+
+        function showSentence(sentence) {
+            var sentenceDiv = document.getElementById('sentence');
+
+            // Show the sentence
+            sentenceDiv.textContent = sentence;
+            sentenceDiv.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
