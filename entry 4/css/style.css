@@ -205,7 +205,8 @@ text-align: center;
 }
 .next{
   position: relative;
-  left: 1410px;
+  left: 1390px;
+  top: 1px;
   font-family: "indivisible", sans-serif;
   font-weight: 700;
   font-style: italic; 
@@ -214,6 +215,7 @@ text-align: center;
 .back{
   position: relative;
   left: 10px;
+  top: 1px;
   font-family: "indivisible", sans-serif;
   font-weight: 700;
   font-style: italic; 
